@@ -1,0 +1,159 @@
+*{
+box-sizing:border-box;
+user-select: none;
+}
+
+body{
+margin:0;
+background:#444;
+}
+
+#container{
+display:flex;
+justify-content: center;
+}
+
+
+.diglett{
+display:none;
+width:60px;
+height:50px;
+border-radius:100px 100px 0px 0px;
+background:#e17055;
+animation-name:example;
+animation-duration:1s;
+animation-iteration-count:infinite;
+padding-top:20px;
+position:absolute;
+z-index:-2;
+cursor:pointer;
+}
+
+@keyframes example {
+0% {  
+transform:translate(0,0);
+
+}
+
+100% {
+transform:translate(0,-50px);
+}
+}
+
+#bg{
+width:50%;
+background:#55efc4;
+height:auto;
+padding:80px;
+display:flex;
+flex-wrap:wrap;
+position:absolute;
+z-index:-2;
+margin-top:80px;
+justify-content: center;
+}
+
+
+.holes{
+width:100px;
+background:#666;
+height:50px;
+border-radius:0 0 15px 15px;
+display:flex;
+justify-content:center;
+margin:10px;
+position:relative;
+bottom:32px;
+left:-4px;
+}
+
+.set{
+width:150px;
+height:auto;
+background:yellow;
+padding:20px;
+margin:10px;
+display:flex
+position:relative;
+z-index:-2;
+border-radius:15px;
+}
+
+#face{
+height:30px;
+}
+
+.eyes{
+width:5px;
+height:15px;
+background:black;
+border-radius:10px;
+margin-left:16px;
+float:left;
+}
+
+.nose{
+background:pink;
+width:20px;
+height:10px;
+border-radius:40px/20px;
+clear:both;
+margin-left:19px;
+}
+
+#score,#h_score,#time{
+font-family:arial;
+font-weight:600;
+font-size:30px;
+margin:10px 50px;
+color:#ccc;
+}
+
+#score{
+    float:left;
+}
+#h_score{
+    float:right;
+}
+
+.plus{
+display:none;
+color:#ecf0f1;
+position:absolute;
+bottom:5px;
+font-size:40px;
+font-family: arial;
+font-weight: 600;
+animation-name:fadeout;
+animation-duration:0.5s;
+}
+
+@keyframes fadeout{
+0%{
+transform:scale(0);
+}
+    50%{
+        transform:scale(2);
+    }
+100%{
+    opacity:0.7;
+    }
+}
+
+@media screen and (max-width:800px)
+{
+    #container{
+    width:100%;   
+    }
+    #bg{
+        width:100%;
+        padding:10% 2%;
+    }
+    
+    #score,#h_score,#time{
+        margin:0;
+        font-size: 100%;
+        text-align: center;
+        padding:10px;
+    }
+}
