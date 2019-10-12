@@ -4,12 +4,14 @@ var diglett=document.getElementsByClassName("diglett");
 var addscore=document.getElementById("addscore");
 var plus=document.getElementsByClassName("plus");
 var holes=document.getElementsByClassName("holes");
+var pop=document.getElementById('pop');
 var c;
 // SCORE COUNTER FOR EVERY CLICK;
 c=0;
 for(let i=0;i<diglett.length;i++){
 
 diglett[i].addEventListener('click',function(){
+pop.play();
 c++;
 if(c<10){
 score.innerHTML="Score: "+"00"+c;
@@ -45,6 +47,9 @@ diglett[show].style.display="block";
 // SCORE COUNTER ENDS;
 
 var gethigh=localStorage.getItem('hscore');
+if(gethigh==null){
+    gethigh=0;
+}
 if(gethigh<10){
 h_score.innerHTML="HighScore: "+"00"+gethigh;
 }
