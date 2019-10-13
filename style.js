@@ -5,9 +5,11 @@ var addscore=document.getElementById("addscore");
 var plus=document.getElementsByClassName("plus");
 var holes=document.getElementsByClassName("holes");
 var pop=document.getElementById('pop');
+var celeb=document.getElementById('celebrate');
 var c;
 // SCORE COUNTER FOR EVERY CLICK;
 c=0;
+celeb.style.display="none";
 for(let i=0;i<diglett.length;i++){
 
 diglett[i].addEventListener('click',function(){
@@ -31,6 +33,14 @@ plus[i].style.display="block";
 setTimeout(()=>{
 plus[i].style.display="none";
 },300);
+    
+    
+//HIGSCORE MODULE
+if((parseInt(gethigh)+1)==parseInt(c)){
+celeb.style.display="block";
+setTimeout(()=>{ celeb.style.display="none";
+},200);
+}
 });
 
 //DIGLETT VANISH ON CLICK
@@ -68,15 +78,8 @@ h_score.innerHTML="HighScore: "+gethigh;
 
 
 
-
 ////EXPERIMENTAL ZONE BELOW ============================================================================
-//var mod1=document.createElement('div');
-//mod1.id="plus";
-//var text=document.createElement('p');
-//var ptext=document.createTextNode("+1");
-//text.appendChild(ptext);
-//mod1.appendChild(text);
-//this.appendChild(mod1);
+
 //======================================================================================================
 
 var time=document.getElementById('time');

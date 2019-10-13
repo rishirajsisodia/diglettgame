@@ -110,10 +110,10 @@ color:#ccc;
 }
 
 #score{
-    float:left;
+float:left;
 }
 #h_score{
-    float:right;
+float:right;
 }
 
 .plus{
@@ -132,28 +132,53 @@ animation-duration:0.5s;
 0%{
 transform:scale(0);
 }
-    50%{
-        transform:scale(2);
-    }
+50%{
+transform:scale(2);
+}
 100%{
-    opacity:0.7;
-    }
+opacity:0.7;
+}
+}
+
+#celebrate{
+font-size: 5em;
+position: absolute;
+color:white;
+font-family: arial;
+font-weight: 800;
+width:100%;
+margin:auto;
+text-align: center;
+animation-name: good;
+animation-duration: 1s;
+}
+@keyframes good{
+0%{
+transform:scale(0);
+}
+50%{
+transform:scale(2);
+}
+100%{
+opacity:0.0;
+transform:scale(2);
+}
 }
 
 @media screen and (max-width:800px)
 {
-    #container{
-    width:100%;   
-    }
-    #bg{
-        width:100%;
-        padding:14% 2%;
-    }
-    
-    #score,#h_score,#time{
-        margin:0;
-        font-size: 100%;
-        text-align: center;
-        padding:10px;
-    }
+#container{
+width:100%;   
+}
+#bg{
+width:100%;
+padding:14% 2%;
+}
+
+#score,#h_score,#time{
+margin:0;
+font-size: 100%;
+text-align: center;
+padding:10px;
+}
 }
