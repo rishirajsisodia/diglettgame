@@ -48,9 +48,9 @@ diglett[show].style.display="block";
 
 var gethigh=localStorage.getItem('hscore');
 if(gethigh==null){
-    gethigh=0;
+    gethigh=localStorage.setItem('hscore',0);
 }
-if(gethigh<10){
+else if(gethigh<10){
 h_score.innerHTML="HighScore: "+"00"+gethigh;
 }
 else if(c<100){
