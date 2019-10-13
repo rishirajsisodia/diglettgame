@@ -9,7 +9,7 @@ var celeb=document.getElementById('celebrate');
 var c;
 // SCORE COUNTER FOR EVERY CLICK;
 c=0;
-celeb.style.display="none";
+//celeb.style.display="none";
 for(let i=0;i<diglett.length;i++){
 
 diglett[i].addEventListener('click',function(){
@@ -39,7 +39,7 @@ plus[i].style.display="none";
 if((parseInt(gethigh)+1)==parseInt(c)){
 celeb.style.display="block";
 setTimeout(()=>{ celeb.style.display="none";
-},200);
+},300);
 }
 });
 

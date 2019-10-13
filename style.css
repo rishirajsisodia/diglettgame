@@ -141,7 +141,7 @@ opacity:0.7;
 }
 
 #celebrate{
-font-size: 5em;
+font-size:3em;
 position: absolute;
 color:white;
 font-family: arial;
@@ -151,6 +151,8 @@ margin:auto;
 text-align: center;
 animation-name: good;
 animation-duration: 1s;
+box-sizing: border-box;
+padding-top:20%;
 }
 @keyframes good{
 0%{
