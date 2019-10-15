@@ -33,8 +33,8 @@ plus[i].style.display="block";
 setTimeout(()=>{
 plus[i].style.display="none";
 },300);
-    
-    
+
+
 //HIGSCORE MODULE
 if((parseInt(gethigh)+1)==parseInt(c)){
 celeb.style.display="block";
@@ -51,14 +51,14 @@ diglett[k].style.display="none";
 var show=Math.floor(Math.random() * diglett.length);
 diglett[show].style.display="block";
 },1000);
-    
+
 }
 
-// SCORE COUNTER ENDS;
+//SCORE COUNTER ENDS;
 
 var gethigh=localStorage.getItem('hscore');
 if(gethigh==null){
-    gethigh=localStorage.setItem('hscore',0);
+gethigh=localStorage.setItem('hscore',0);
 }
 else if(gethigh<10){
 h_score.innerHTML="HighScore: "+"00"+gethigh;
@@ -70,33 +70,23 @@ else{
 h_score.innerHTML="HighScore: "+gethigh;        
 }
 
-
-
-
-
-
-
-
-
-////EXPERIMENTAL ZONE BELOW ============================================================================
-
-//======================================================================================================
+//COUNTDOWN BELOW ===================================
 
 var time=document.getElementById('time');
 var count=30;
 setInterval(()=>{
-    count--;
-    if(count>=0){
-        if(count<10){
-    time.innerHTML="Remaining: 00:"+"0"+count;
-        }
-        else{
-    time.innerHTML="Remaining: 00:"+count;
-        }
-    }
-    else{
-    window.location.href = "score.html";
-    }
+count--;
+if(count>=0){
+if(count<10){
+time.innerHTML="Remaining: 00:"+"0"+count;
+}
+else{
+time.innerHTML="Remaining: 00:"+count;
+}
+}
+else{
+window.location.href = "score.html";
+}
 },1000);
 
 

@@ -8,11 +8,11 @@ var c;
 c=0;
 setInterval(()=>{
 c++;
-    if(c<=getScore){
-        score.innerHTML=c;
-    }
+if(c<=getScore){
+score.innerHTML=c;
+}
 },50)
 
 document.getElementById("play").onclick=()=>{
-    location.href="index.html";
+location.href="index.html";
 }
