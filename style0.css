@@ -12,7 +12,7 @@ justify-content: center;
 #bg{
 background:#55efc4;
 width:50%;
-height:400px;
+height:auto;
 display:flex;
 position:absolute;
 z-index:-2;
@@ -20,6 +20,7 @@ margin-top:80px;
 text-align: center;
 align-items: center;
 flex-direction: column;
+padding:50px;
 }
 
 #play{
@@ -57,9 +58,10 @@ flex-direction: column;
     color:#2f3640;
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:800px){
     #bg{
         width:100%;
+        height:auto;
     }
     #header{
         font-size: 3.5em;
