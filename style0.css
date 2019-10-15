@@ -62,8 +62,8 @@ flex-direction: column;
         width:100%;
     }
     #header{
+        font-size: 3.5em;
         height:auto;
         margin:0;
-        margin-top:20px;
     }
 }
